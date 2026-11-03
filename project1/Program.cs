@@ -1,20 +1,38 @@
-﻿using System;
+﻿
+using System;
 
 class Program
 {
-    static bool Check(int m, int n)
+    // Метод проверки принадлежности точки области
+    static bool IsInside(double x, double y)
     {
-        return m > 0 || n > 0;
+        if (x >= 2 || (y >= 0.5 && y <= 1.5))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     static void Main()
     {
-        Console.Write("Введите m: ");
-        int m = int.Parse(Console.ReadLine());
+        Console.Write("Введите x: ");
+        double x = Convert.ToDouble(Console.ReadLine());
 
-        Console.Write("Введите n: ");
-        int n = int.Parse(Console.ReadLine());
+        Console.Write("Введите y: ");
+        double y = Convert.ToDouble(Console.ReadLine());
 
-        Console.WriteLine(Check(m, n));
+        if (IsInside(x, y))
+        {
+            Console.WriteLine("Точка принадлежит области");
+        }
+        else
+        {
+            Console.WriteLine("Точка не принадлежит области");
+        }
+
+        Console.ReadKey();
     }
 }
