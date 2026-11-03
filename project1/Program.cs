@@ -3,7 +3,7 @@ using System;
 
 class Program
 {
-    // Метод проверки принадлежности точки области
+
     static bool IsInside(double x, double y)
     {
         if (x >= 2 || (y >= 0.5 && y <= 1.5))
